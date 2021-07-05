@@ -1,0 +1,197 @@
+.p-shake {
+    animation: shake 1.5s infinite ease;
+
+    @keyframes shake {
+        0% {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        20% {
+            -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+        }
+
+        30%,
+        50%,
+        70%,
+        90% {
+            -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+        }
+
+        40%,
+        60%,
+        80% {
+            -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+        }
+
+        100% {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+    }
+
+    &__torigin {
+        transform-origin: 130px 15px;
+    }
+}
+
+.p-walk {
+    animation: walk 10s both;
+
+    @keyframes walk {
+        0% {
+            transform: translateX(-300px);
+        }
+
+        100% {
+            transform: translateX(300px);
+        }
+    }
+}
+
+
+.p-slide {
+    animation: slide 20s both infinite linear;
+
+    &__reverse {
+        animation-duration: 10s;
+        animation-direction: reverse;
+    }
+
+    &__airplane {
+        animation: airplane 15s both infinite linear reverse;
+
+    }
+
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0%);
+        }
+
+        50% {
+            transform: translateX(30%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes airplane {
+        from {
+            transform: translateX(-900px);
+        }
+
+        to {
+            transform: translateX(1500px);
+        }
+
+    }
+
+
+}
+
+.p-jump {
+    animation: jump 1s alternate infinite ease;
+
+    @keyframes jump {
+        from {
+            transform: translateY(10px);
+        }
+
+        to {
+            transform: translateY(100px);
+        }
+    }
+}
+
+
+.p-popup {
+    // @include is-sp{
+    //     opacity: 0;
+    // }
+    animation: popup 1s infinite ease;
+    transform-origin: 170px 100px;
+
+    @include is-sp {
+        transform-origin: 200px 100px;
+    }
+
+    @keyframes popup {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+}
+
+.p-swing {
+    animation: swing 3s infinite linear;
+
+    @keyframes swing {
+        0% {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+
+        10% {
+            -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+        }
+
+        45% {
+            -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+        }
+
+        90% {
+            -webkit-transform: rotate(-6deg);
+            transform: rotate(-6deg);
+        }
+
+        100% {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+    }
+}
+
+.p-raise {
+    animation: raise 1s infinite ease-in-out;
+
+    @keyframes raise {
+        // from{
+        //     transform: translateY(3px);
+        // }
+        // to{
+        //     transform: translateY(0px);
+        // }
+
+        0% {
+            transform: translateY(3px);
+        }
+
+        10% {
+            transform: translateY(2px);
+        }
+
+        45% {
+            transform: translateY(1px);
+        }
+
+        90% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(3px);
+        }
+    }
+}

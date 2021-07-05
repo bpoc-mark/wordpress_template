@@ -1,0 +1,179 @@
+.p-header {
+    top: 0;
+    $p-header: '.p-header';
+
+    @include is-pc {
+        padding: 20px 0;
+    }
+
+    &__branding {
+        @include is-sp {
+            width: 50%;
+        }
+
+        .logo {
+            width: 70%;
+            height: 100%;
+            @include is-sp {
+                width: 200px;
+            }
+        }
+    }
+
+    &__frame {
+        display: flex;
+    }
+
+    &__navigation {
+        @include is-sp {
+            width: 50%;
+        }
+    }
+
+    &__landing {
+
+        &Left,
+        &Right {
+            width: 50%;
+        }
+
+        &Inner {
+            display: block;
+            padding: 0 40px;
+        }
+
+        &Left {
+            .promotion {
+                @include font-line(16);
+                font-weight: 700;
+            }
+
+            .logo {
+                max-width: 50%;
+            }
+        }
+
+        &Top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 30px;
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &Bottom {
+            display: flex;
+            justify-content: space-between;
+
+            .text {
+                @include font-line(18);
+                font-weight: 700;
+            }
+        }
+    }
+
+    &.scroll {
+        #{$p-header}__main {
+            @include is-tabpc {
+                width: 100%;
+                background: #fff;
+                border-bottom: 1px solid #e0e0e0;
+                position: fixed;
+                margin: 0 auto;
+                top: -61px;
+                left: 0;
+                right: 0;
+                height: 48px;
+                transition: .4s;
+                z-index: 999;
+            }
+        }
+
+        #{$p-header}__frame {
+            @include is-tabpc {
+                margin: 2.5px 0px;
+                height: 40px;
+            }
+        }
+
+        #{$p-header}__landingLeft {
+            @include is-tabpc {
+                width: 30%;
+            }
+        }
+
+        #{$p-header}__landingRight {
+            @include is-tabpc {
+                width: 30%;
+            }
+        }
+
+        #{$p-header}__landingTop {
+            @include is-tabpc {
+                padding: 0;
+            }
+        }
+
+        #{$p-header}__landingBottom {
+            @include is-tabpc {
+                display: none;
+            }
+        }
+
+        .logo {
+            @include is-tabpc {
+                width: auto;
+            }
+        }
+
+        .scroll-link {
+            color: black;
+        }
+
+        .current {
+            color: $color-primary;
+        }
+
+        .btn {
+            border-radius: 0;
+
+            &:hover {
+                background-color: $color-sub;
+            }
+        }
+
+        .lp {
+            &__main {
+                height: auto !important;
+                padding: 5px $gutter-pc;
+
+                .promotion {
+                    display: none;
+                }
+            }
+
+            &__button {
+                border-radius: 5px;
+                box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0);
+            }
+
+            &__landingInner {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    &.scroll-up {
+        #{$p-header}__main {
+            @include is-tabpc {
+                top: 0;
+                height: 48px;
+                align-items: center;
+            }
+        }
+    }
+}

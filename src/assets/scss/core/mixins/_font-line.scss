@@ -1,0 +1,15 @@
+// ---------------------------------------------------------------
+//  font-line
+//
+// > usage
+// > @include font-line(16, 20);
+//
+// ---------------------------------------------------------------
+@mixin font-line($size, $line:null) {
+    $rem: $size / $font-size-base;
+    font-size: #{$rem}rem;
+    @if $line !=null {
+      line-height: $line / $size;
+    }
+  }
+  

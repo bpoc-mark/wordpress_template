@@ -1,0 +1,47 @@
+.c-table01 {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    &__row {
+        padding: 10px;
+    }
+
+    &__overviewTbl__heading {
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    &__overviewTbl__dataleft {
+        text-align: left;
+        border-bottom: 1px solid #eee;
+        @include is-sp{
+            @include font-line(11);
+        }
+    }
+
+    &__overviewTbl__data {
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        @include is-sp{
+            @include font-line(13);
+        }
+    }
+
+    &__overviewTbl__datajapan {
+        text-align: center;
+        font-weight: 700;
+        border-bottom: 1px solid #eee;
+        color: #000;
+        @include is-sp{
+            @include font-line(13);
+        }
+    }
+
+    &__overviewTbl__dataph {
+        text-align: center;
+        font-weight: 700;
+        border-bottom: 1px solid #eee;
+        color: #f56040;
+    }
+}

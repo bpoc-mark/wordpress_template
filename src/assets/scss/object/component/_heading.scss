@@ -1,0 +1,209 @@
+.c-heading {
+
+    // 大見出し01
+    // 使用例: <h2 class="c-heading01">MIDASHI<span class="c-heading01__sub">見出し</span></h2>
+    &01 {
+        position: relative;
+        $heading: &;
+        display: flex;
+        align-items: center;
+        padding: 0 0 8px;
+        font-weight: bold;
+        color: $color-main;
+        letter-spacing: 0;
+        text-align: center;
+        position: relative;
+        border-bottom: solid 2px $color-main;
+
+        @include is-sp {
+            margin: 0 auto 20px;
+            @include font-line(21, 21);
+        }
+
+        @include is-tabpc {
+            margin: 0 auto 30px;
+        }
+
+        @include is-tabpc {
+            @include font-line(30, 30);
+        }
+
+        &--s {
+            @include is-sp {
+                @include font-line(15, 15);
+            }
+        }
+
+        &:before {
+            content: '';
+            background: #000;
+
+            @include is-sp {
+                width: 15px;
+                height: 10px;
+                margin-right: 5px;
+                background-size: cover;
+            }
+
+            @include is-tabpc {
+                width: 20px;
+                height: 12px;
+                margin-right: 15px;
+                background-size: contain;
+            }
+        }
+
+        &--nobefore {
+            &:before {
+                display: none;
+            }
+        }
+
+        &__icon {
+            color: $color-accent;
+            position: absolute;
+            left: 0;
+            @include font-line(40, 40);
+
+            @include is-sp {
+                @include font-line(23, 23);
+            }
+        }
+
+        &__sub {
+            font-family: $font-family-en;
+            font-weight: bold;
+            color: $color-accent;
+            align-self: flex-end;
+            margin: 0 0 0 13px;
+            padding: 0;
+            letter-spacing: 0.02em;
+            text-align: center;
+            vertical-align: top;
+
+            @include is-sp {
+                @include font-line(13, 13);
+                margin: 0 0 0 8px;
+            }
+
+            @include is-tabpc {
+                @include font-line(18, 18);
+            }
+        }
+    }
+
+    // 中見出し01
+    // 使用例: <h3 class="c-heading02">中見出し01</h3>
+    &02 {
+        $heading: &;
+        display: flex;
+        align-items: center;
+        padding: 0 0 14px;
+        font-weight: 500;
+        color: $color-main;
+        letter-spacing: 0;
+        text-align: center;
+        position: relative;
+        border-bottom: solid 2px $color-main;
+
+        @include is-sp {
+            margin: 0 auto 20px;
+            @include font-line(22, 22);
+        }
+
+        @include is-tabpc {
+            margin: 0 auto 30px;
+            @include font-line(30, 30);
+        }
+
+        &--s {
+            @include is-sp {
+                @include font-line(22, 22);
+            }
+        }
+
+        &__sub {
+            font-family: $font-family-en;
+            font-weight: bold;
+            color: $color-accent;
+            align-self: flex-end;
+            margin: 0 0 0 13px;
+            padding: 0;
+            letter-spacing: 0.02em;
+            text-align: center;
+            vertical-align: top;
+
+            @include is-sp {
+                @include font-line(13, 13);
+                margin: 0 0 0 8px;
+            }
+
+            @include is-tabpc {
+                @include font-line(18, 18);
+            }
+        }
+    }
+
+    // 中見出し02
+    // 使用例: <h3 class="c-heading03">中見出し02</h3>
+    &03 {
+        border-bottom: 2px solid $color-main;
+        padding: 0 0 10px;
+        font-weight: 700;
+        color: $color-text01;
+        display: block;
+
+        @include is-sp {
+            margin-bottom: 20px;
+            @include font-line(20, 20);
+        }
+
+        @include is-tabpc {
+            margin-bottom: 25px;
+            @include font-line(22, 22);
+        }
+    }
+
+    // 中見出し03
+    // 使用例: <h3 class="c-heading04">中見出し03</h3>
+    &04 {
+        font-weight: 700;
+        color: $color-text01;
+        text-align: left;
+        position: relative;
+
+        @include is-sp {
+            margin: 0 0 15px;
+            padding: 0 0 0 15px;
+            @include font-line(18, 30);
+        }
+
+        @include is-tabpc {
+            margin: 0 0 15px;
+            padding: 0 0 0 15px;
+            @include font-line(20, 30);
+        }
+
+        &::before {
+            content: '';
+            border-left: 7px solid $color-accent;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            display: block;
+        }
+    }
+
+    // 小見出し01
+    // 使用例: <h4 class="c-heading07">小見出し01</h4>
+    &05 {
+        background-color: $color-primary-lighten-50;
+        height: 35px;
+        margin: 0 0 20px;
+        padding: 0 0 0 10px;
+        font-weight: 700;
+        @include font-line(17, 35);
+        color: $color-text01;
+        text-align: left;
+    }
+}

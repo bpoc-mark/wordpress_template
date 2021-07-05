@@ -1,0 +1,289 @@
+.c-card01 {
+    display: block;
+    background-color: white;
+    position: relative;
+    margin: 20px auto;
+    padding: 2%;
+
+    &--md {
+        width: calc(90%/3);
+
+        @include is-sp {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    &__top,
+    &__center,
+    &__bottom {
+        text-align: center;
+    }
+
+    &__center,
+    &__bottom {
+        height: 200px;
+    }
+
+    &__bottom {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        @include is-sp {
+            width: 100%;
+            height: 240px;
+        }
+
+        @include is-tabpc {
+            max-height: 200px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__pic {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title,
+    &__desc {
+        padding: 20px;
+    }
+
+    &__title {
+        @include is-pc {
+            @include font-line(18);
+            font-weight: 600;
+        }
+    }
+
+    &__desc {
+        letter-spacing: 1px;
+
+        @include is-tabpc {
+            @include font-line(13);
+            font-weight: 700;
+        }
+    }
+}
+
+.c-card02 {
+    position: relative;
+    display: inline-block;
+    padding: 30px;
+    margin: 20px;
+    transition: padding 0.3s ease-out;
+
+    /* Pre-render the bigger shadow, but hide it */
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(30, 144, 255, 0.3);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(30, 144, 255, 0.3);
+        box-shadow: 0px 0px 20px 0px rgba(30, 144, 255, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+    }
+
+    &:hover {
+        padding: 35px;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &__pic {
+        height: 75px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+}
+
+.c-card03 {
+    position: relative;
+    padding: 30px;
+    height: 180px;
+    width: calc(100%/4);
+
+    &__pic {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+}
+
+.c-card04 {
+    display: block;
+    background-color: white;
+    position: relative;
+    margin: 20px auto;
+    padding: 2%;
+
+    &--md {
+        width: calc(90%/3);
+
+        @include is-sp {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    &__top,
+    &__center,
+    &__bottom {
+        text-align: center;
+    }
+
+    &__bottom {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include is-sp {
+            width: 100%;
+            height: 280px;
+            align-items: flex-start;
+        }
+
+        @include is-tabpc {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__pic {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title,
+    &__desc {
+        padding: 20px 5px;
+        @include is-sp{
+            padding: 15px 5px;
+        }
+    }
+
+    &__title {
+        @include is-tabpc {
+            @include font-line(18);
+            font-weight: 900;
+        }
+    }
+
+    &__desc {
+        letter-spacing: 1px;
+
+        @include is-tabpc {
+            @include font-line(13);
+            font-weight: 700;
+        }
+    }
+}
+
+.c-card05 {
+    text-decoration: none;
+    color: $color-text04;
+    display: block;
+    padding: 20px;
+    word-break: break-word;
+    border-color: #ececec;
+    transition: box-shadow .2s ease, -webkit-transform .3s cubic-bezier(.34, 2, .6, 1);
+    transition: transform .3s cubic-bezier(.34, 2, .6, 1), box-shadow .2s ease;
+    transition: transform .3s cubic-bezier(.34, 2, .6, 1), box-shadow .2s ease, -webkit-transform .3s cubic-bezier(.34, 2, .6, 1);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+    margin-bottom: 20px;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+    }
+
+    &--l {
+        height: 500px;
+    }
+
+    &__top {
+        height: 12rem;
+        margin-bottom: 1rem;
+        position: relative;
+
+        .feature {
+            display: block;
+            height: inherit;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+
+        .stamp {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+    }
+
+    &__center {
+        height: 12rem;
+
+        .description {
+            height: inherit;
+            overflow: hidden;
+        }
+
+        .title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 0;
+        }
+
+        .summary {
+            overflow-y: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    &__bottom {
+        margin: 20px 0 0;
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .avatar {
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 999px;
+        }
+    }
+}

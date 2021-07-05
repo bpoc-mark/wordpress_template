@@ -1,0 +1,47 @@
+.p-error {
+
+    &__left,
+    &__right {
+        @include is-sp {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__frame {
+        @include is-tabpc {
+            height: 390px;
+        }
+    }
+
+    .ttl,
+    .text {
+        font-family: "Kosugi Maru", Sans-serif;
+    }
+
+    .ttl {
+        @include font-line(46, 46);
+        padding: 50px 0 20px;
+        margin: 0;
+    }
+
+    .link {
+        font-weight: bolder;
+        text-decoration: underline;
+    }
+
+    &__option {
+        padding: 0 0 0 20px;
+    }
+
+    &__listItem {
+        padding: 20px 0 0;
+    }
+
+    li {
+        @include is-tabpc {
+            list-style: decimal;
+        }
+    }
+}

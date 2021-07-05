@@ -1,0 +1,64 @@
+.p-carousel {
+    overflow: hidden;
+    position: relative;
+
+    // &:before,
+    // &:after {
+    //     position: absolute;
+    //     top: 0;
+    //     width: 10rem;
+    //     height: 100%;
+    //     content: "";
+    //     z-index: 1;
+    // }
+
+    // &:before {
+    //     left: 0;
+    //     background: linear-gradient(to right, #111 0%, transparent 100%);
+    // }
+
+    // &:after {
+    //     right: 0;
+    //     background: linear-gradient(to left, #111 0%, transparent 100%);
+    // }
+
+    &__slider {
+        width: 80vw;
+        display: flex;
+        animation: scrolling 34s linear infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    &__frames {
+        white-space: nowrap;
+
+        img {
+            //reset
+            height: auto;
+            min-width: 0;
+            max-width: none;
+            //override
+            width: 62px;
+            margin-right: 62px;
+
+            @include is-sp {
+                width: 50px;
+                margin-right: 50px;
+            }
+        }
+    }
+
+    @keyframes scrolling {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-136vw);
+        }
+    }
+}
+

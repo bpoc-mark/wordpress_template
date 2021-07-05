@@ -1,0 +1,141 @@
+.attachment {
+    position: fixed;
+    margin-top: 120px;
+    margin-left: 1550px;
+
+    .img {
+        height: 134.39px;
+        width: 227.39px;
+    }
+}
+
+.p-introduction {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__inner {
+        padding-top: 100px;
+    }
+
+    &__intro,
+    &__showcase {
+        padding: 10px;
+    }
+
+    &__intro {
+        .headline {
+            margin: 0 0 20px;
+            display: block;
+            text-align: right;
+
+            @include is-sp {
+                text-align: center;
+            }
+
+            &__text {
+                display: block;
+                color: black;
+
+                @include is-sp {
+                    @include font-line(18);
+
+                }
+
+                @include is-tab {
+                    @include font-line(26);
+                }
+
+                @include is-pc {
+                    @include font-line(48);
+                }
+
+            }
+        }
+
+        .description {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__showcase {
+        .pic {
+            width: 100%;
+        }
+    }
+
+    &__image {
+        .image_1 {
+            @include is-pc {
+                height: 188.56px;
+                width: 184.8px;
+            }
+        }
+
+        .image_2 {
+            @include is-pc {
+                height: 87px;
+                width: 190.39px;
+            }
+        }
+
+        .image_3 {
+            @include is-pc {
+                height: 88.5px;
+                width: 190.39px;
+            }
+        }
+
+        .image_4 {
+            @include is-pc {
+                height: 96.67px;
+                width: 190.39px;
+            }
+        }
+
+        .image_1,
+        .image_2,
+        .image_3,
+        .image_4 {
+            margin: 0 25px;
+        }
+    }
+
+    &__text {
+
+        margin: 50px 0;
+
+        .heading {
+            background-color: white;
+            width: 732.25px;
+            height: 72px;
+            text-align: center;
+
+            &__text {
+                background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                display: inline-block;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 400;
+                font-size: 60px;
+                text-align: center;
+                margin: auto;
+                line-height: 1.2;
+                font-family: MotoyaLMaru;
+            }
+        }
+
+        .sub-text {
+            padding: 20px 0px 0px;
+
+            &__text {
+                color: white;
+                font-weight: 600;
+                font-size: 30px;
+                text-align: left;
+                margin: auto;
+                line-height: 1;
+                font-family: MotoyaLMaru;
+            }
+        }
+    }
+}

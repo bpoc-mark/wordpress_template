@@ -1,0 +1,12 @@
+.c-link {
+    padding: 4px 0;
+
+    &__inner {
+        transition: color 0.3s ease-out;
+        color: #fff;
+
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}

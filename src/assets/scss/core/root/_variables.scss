@@ -1,0 +1,128 @@
+ /*
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ VARIABLE FOR MIXINS _media.scss
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ $base-size: 5;
+ $body-min-width: 1024px;
+ $wrap-width: 1000px;
+ $wrap-max-width: initial;
+ $wrap-wp-margin: auto;
+
+ $breakpoint-sp: 750px;
+ $breakpoint-tab: 750px;
+ $breakpoint-pc: 0;
+ $wrap-wp-margin: auto;
+
+ $gutter-pc: 20px;
+ $gutter-sp: 10px;
+
+ $content-top-pc: 60px;
+ $content-btm-pc: 60px;
+ $content-top-sp: 30px;
+ $content-btm-sp: 30px;
+
+ /*
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ VARIABLE FOR MIXINS _font-line.scss
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+ $font-family-base: 'Noto Sans JP',
+ sans-serif;
+ $font-family-main: 'Montserrat',
+ sans-serif;
+ $font-family-en: 'Roboto',
+ sans-serif;
+ $font-size-base: 16;
+ $font-weight-base: 500;
+ $line-height-base: 1.75;
+
+ // ---------------------------------------------------------------
+ //  Line-hieght
+ // ---------------------------------------------------------------
+ $line-height-base: 1.75;
+
+ //validation
+ $color-valid: #E5F9DA;
+ $color-invalid: #F6D4D4;
+ // fonts
+ $color-text-default: #000;
+ $color-text01: #303030;
+ $color-text02: rgba(255, 255, 255, .66);
+ $color-text03: #fff;
+ $color-text04: #454545;
+ $color-text05: #464646;
+ $color-text06: #666;
+
+ $color-border: #e0e0e0;
+ $color-bg: #f5f5f5;
+
+ $color-main: #000;
+ $color-sub: #e0e0e0;
+ $color-accent: #0072a6;
+ $color-primary:#F77737;
+ $color-secondary:#833AB4;
+ 
+ $color-login: $color-main;
+ $color-reserve: $color-accent;
+ $color-contact: $color-main;
+ $color-regist: $color-accent;
+
+ $bg-color-linear-top: $color-secondary;
+ $bg-color-linear-bottom: $color-primary;
+ $bg-color-footer: rgba(0, 0, 0, .8705882352941177);
+
+ // $color-primary
+ $color-primary: $color-main;
+ $color-primary-saturate: saturate($color-primary, 15%);
+ $color-primary-desaturate: desaturate($color-primary, 15%);
+ $color-primary-darken: darken($color-primary, 10%);
+ $color-primary-lighten-10: lighten($color-primary, 10%);
+ $color-primary-lighten-20: lighten($color-primary, 20%);
+ $color-primary-lighten-30: lighten($color-primary, 30%);
+ $color-primary-lighten-50: lighten($color-primary, 50%);
+ // $color-secondary
+ $color-secondary: $color-sub;
+ $color-secondary-saturate: saturate($color-secondary, 15%);
+ $color-secondary-desaturate: desaturate($color-secondary, 15%);
+ $color-secondary-darken: darken($color-secondary, 10%);
+ $color-secondary-lighten-10: lighten($color-secondary, 10%);
+ $color-secondary-lighten-20: lighten($color-secondary, 20%);
+ $color-secondary-lighten-30: lighten($color-secondary, 30%);
+ // $color-tertiary
+ $color-tertiary: $color-accent;
+ $color-tertiary-saturate: saturate($color-tertiary, 15%);
+ $color-tertiary-desaturate: desaturate($color-tertiary, 15%);
+ $color-tertiary-darken: darken($color-tertiary, 10%);
+ $color-tertiary-lighten-10: lighten($color-tertiary, 10%);
+ $color-tertiary-lighten-20: lighten($color-tertiary, 20%);
+ $color-tertiary-lighten-30: lighten($color-tertiary, 30%);
+ // $color-quaternary
+ $color-quaternary: #4e88c4;
+ $color-quaternary-saturate: saturate($color-quaternary, 15%);
+ $color-quaternary-desaturate: desaturate($color-quaternary, 15%);
+ $color-quaternary-darken: darken($color-quaternary, 10%);
+ $color-quaternary-lighten-10: lighten($color-quaternary, 10%);
+ $color-quaternary-lighten-20: lighten($color-quaternary, 20%);
+ $color-quaternary-lighten-30: lighten($color-quaternary, 30%);
+ // $color-border
+ $color-border: #aaa;
+ $color-border-saturate: saturate($color-border, 15%);
+ $color-border-desaturate: desaturate($color-border, 15%);
+ $color-border-darken: darken($color-border, 10%);
+ $color-border-lighten-10: lighten($color-border, 10%);
+ $color-border-lighten-20: lighten($color-border, 20%);
+ $color-border-lighten-30: lighten($color-border, 30%);
+ // red
+ $color-red: #f00;
+ $color-red-saturate: saturate($color-red, 15%);
+ $color-red-desaturate: desaturate($color-red, 15%);
+ $color-red-darken: darken($color-red, 10%);
+ $color-red-lighten-10: lighten($color-red, 10%);
+ $color-red-lighten-20: lighten($color-red, 20%);
+ $color-red-lighten-30: lighten($color-red, 30%);
+ // ---------------------------------------------------------------
+ //  Margin
+ // ---------------------------------------------------------------
+ $margin-base: $base-size * 1px;

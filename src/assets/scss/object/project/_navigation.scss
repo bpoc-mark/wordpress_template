@@ -1,0 +1,203 @@
+.p-navigation {
+    display: flex;
+    position: relative;
+    margin: 0 0 0 auto;
+
+
+    &__link {
+        margin: 0 0.8rem;
+        position: relative;
+
+        &:after {
+            transition: 0.3s ease-in-out all;
+            content: " ";
+            height: 2px;
+            width: 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $color-primary;
+        }
+
+        &:before {
+            transition: 0.3s ease-in-out all;
+            content: " ";
+            height: 2px;
+            width: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: $color-primary;
+        }
+
+        &:hover {
+            &:after {
+                content: " ";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $color-primary;
+            }
+
+            &:before {
+                content: " ";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: $color-primary;
+            }
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:nth-child(4) {
+            margin-right: 0;
+
+            &:after,
+            &:before {
+                display: none;
+            }
+
+            &:hover {
+
+                &:after,
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+
+
+
+        .current {
+            color: $color-primary;
+
+            &:before {
+                content: " ";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $color-primary;
+            }
+
+            &:after {
+                content: " ";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-color: $color-primary;
+            }
+        }
+
+        .lp {
+            color: $color-primary;
+        }
+
+        .items {
+            color: white;
+            font-weight: 700;
+
+            @include is-tabpc {
+                @include font-line(16);
+            }
+        }
+    }
+
+    &__burger {
+        @include is-tabpc {
+            display: none;
+        }
+
+        @include is-sp {
+            position: fixed;
+            background: #fff;
+            height: 80vh;
+            width: 100%;
+            clip-path: circle(100px at 90% -15%);
+            -webkit-clip-path: circle(100px at 90% -15%);
+            left: 0;
+            transition: all 1s ease-out;
+            top: -20px;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        &Items {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 85px 0 0;
+            height: 365px;
+            z-index: 999;
+        }
+
+        &Item {
+            text-align: center;
+
+            .link {
+                color: #000;
+            }
+
+            .current {
+                color: $color-primary;
+            }
+        }
+    }
+
+    .open {
+        @include is-sp {
+            clip-path: circle(800px at 90% -15%);
+            -webkit-clip-path: circle(800px at 90% -15%);
+            pointer-events: all;
+        }
+    }
+
+    .btn-menu {
+        @include is-tabpc {
+            display: none;
+        }
+
+        @include font-line(16, 16);
+        font-weight: bold;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        padding: 10px 5px;
+        background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1) !important;
+        background-size: 200% auto !important;
+        border: none;
+        color: #fff;
+        z-index: 999;
+
+        .bars {
+            display: block;
+            width: 50%;
+            height: 2px;
+            background: #fff;
+        }
+    }
+
+
+    .show {
+        @include is-sp {
+            position: fixed;
+            right: 10px;
+            top: 28px;
+        }
+    }
+}

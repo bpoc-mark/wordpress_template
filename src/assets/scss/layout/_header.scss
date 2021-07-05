@@ -1,0 +1,48 @@
+.l-header {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-direction: row;
+    z-index: 999;
+    &__inner {
+
+        // variation
+        &--flex {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &--block {
+            display: block;
+        }
+
+        @include is-sp {
+            padding-left: $gutter-sp;
+            padding-right: $gutter-sp;
+        }
+
+        @include is-tab {
+            padding-left: $gutter-pc - 5px;
+            padding-right: $gutter-pc - 5px;
+        }
+
+        @include is-pc {
+            width: $body-min-width;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: $gutter-pc;
+            padding-right: $gutter-pc;
+        }
+    }
+
+    &__left {
+        width: 30%;
+    }
+
+    &__right {
+        width: 70%;
+    }
+}
+
+// end of l-header

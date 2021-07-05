@@ -1,0 +1,342 @@
+.c-button01 {
+    $button01: &;
+    background-color: #fff;
+    border: 2px #ccc solid;
+    width: 100%;
+    font-weight: 700;
+    @include font-line(20, 20);
+    color: $color-text01;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      transform: rotate(45deg);
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      @include is-sp {
+        right: 10px;
+        width: 8px;
+        height: 8px;
+      }
+      @include is-tabpc {
+        right: 18px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+    &:hover {
+      @include is-tabpc {
+        @include opacity(0.7);
+      }
+    }
+    i {
+      margin-right: 5px;
+      z-index: 1;
+    }
+  
+    &--xxl {
+      @include is-tabpc {
+        height: 75px;
+        @include font-line(23, 23);
+      }
+      &::after {
+        right: 20px;
+      }
+    }
+    &--xl {
+      @include is-sp {
+        height: 70px;
+      }
+      @include is-tabpc {
+        height: 75px;
+        @include font-line(20, 20);
+      }
+      &::after {
+        right: 20px;
+      }
+    }
+    &--l {
+      @include is-sp {
+        height: 60px;
+        @include font-line(20, 20);
+      }
+      @include is-tabpc {
+        height: 60px;
+        @include font-line(20, 20);
+      }
+      &::after {
+        right: 15px;
+      }
+    }
+    &--m {
+      @include is-sp {
+        height: 45px;
+        @include font-line(16, 16);
+      }
+      @include is-tabpc {
+        height: 50px;
+        @include font-line(20, 20);
+      }
+    }
+    &--s {
+      @include is-sp {
+        height: 40px;
+        @include font-line(14, 14);
+      }
+      @include is-tabpc {
+        height: 36px;
+        @include font-line(14, 14);
+      }
+      &::after {
+        right: 10px;
+      }
+    }
+    &--edit {
+      @include is-sp {
+        width: 48.5%;
+        margin-right: 0;
+        margin-left: auto;
+      }
+      @include is-tabpc {
+        margin: 0 auto;
+        height: 50px;
+        width: 300px;
+      }
+    }
+  
+    &--main {
+      background-color: $color-main;
+      border-color: $color-main;
+      color: #fff;
+      &--w {
+        background-color: #fff;
+        border-color: $color-main;
+        color: $color-main;
+        &:after {
+          border-color: $color-main;
+        }
+      }
+    }
+    &--sub {
+      background-color: #fff;
+      border-color: $color-main;
+      color: $color-main;
+      &--w {
+        background-color: #fff;
+        border-color: $color-sub;
+        color: $color-sub;
+        &:after {
+          border-color: $color-main;
+        }
+      }
+  
+      &:after {
+        border-color: $color-main;
+      }
+    }
+    &--accent {
+      background-color: $color-accent;
+      border-color: $color-accent;
+      color: #fff;
+      &--w {
+        background-color: #fff;
+        border-color: $color-accent;
+        color: $color-accent;
+        &:after {
+          border-color: $color-accent;
+        }
+      }
+    }
+    &--login {
+      background-color: $color-login;
+      border-color: $color-login;
+      color: #fff;
+      &--w {
+        background-color: #fff;
+        border-color: $color-login;
+        color: $color-login;
+        &:after {
+          border-color: $color-login;
+        }
+      }
+    }
+    &--contact {
+      background-color: $color-contact;
+      border-color: $color-contact;
+      color: #fff;
+      &--w {
+        background-color: #fff;
+        border-color: $color-contact;
+        color: $color-contact;
+        &:after {
+          border-color: $color-contact;
+        }
+      }
+    }
+    &--regist {
+      background-color: $color-regist;
+      border-color: $color-regist;
+      color: #fff;
+      &--w {
+        background-color: #fff;
+        border-color: $color-regist;
+        color: $color-regist;
+        &:after {
+          border-color: $color-regist;
+        }
+      }
+    }
+    &--reserve {
+      background-color: $color-reserve;
+      border-color: $color-reserve;
+      color: #fff;
+      &--w {
+        background-color: #fff;
+        border-color: $color-reserve;
+        color: $color-reserve;
+        &:after {
+          border-color: $color-reserve;
+        }
+      }
+    }
+  
+    &--nobullet {
+      padding: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &--return {
+      &:after {
+        transform: rotate(-135deg);
+        @include is-sp {
+          left: 10px;
+        }
+        @include is-tabpc {
+          left: 18px;
+        }
+      }
+    }
+  
+    &--baloon {
+      display: block;
+      position: relative;
+      text-align: center;
+      @include is-sp {
+        padding: 7.5px 0 10px 47px;
+      }
+      @include is-tabpc {
+        padding: 14px 0 14px 47px;
+        width: 310px;
+      }
+      .baloon {
+        font-family: $font-family-base;
+        position: absolute;
+        left: -10px;
+        width: 71px;
+        height: 71px;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: solid 4px $color-accent;
+        color: $color-main;
+        font-size: 10px;
+        text-align: center;
+        @include is-tabpc {
+          top: 0px;
+          @include font-line(12);
+          font-weight: bold;
+        }
+        @include is-sp {
+          top: 0;
+          width: 66px;
+          height: 66px;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          right: -4px;
+          margin-top: -13px;
+          border: 6px solid transparent;
+          border-left: 10px solid #fff;
+          z-index: 0;
+          transform: rotate(40deg);
+          z-index: 0;
+        }
+      }
+      .line01 {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+        @include font-line(12.6, 12.6);
+        @include is-sp{
+          @include font-line(12,12);
+        }
+      }
+      .line02{
+        @include font-line(23.6,23.6);
+        @include is-sp{
+          @include font-line(23,23);
+        }
+      }
+    }
+  }
+  
+  .c-buttonSns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      @include is-tabpc {
+        @include opacity(0.6);
+      }
+    }
+    i {
+      z-index: 1;
+    }
+  
+    &--insta {
+      position: relative;
+      background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+      overflow: hidden;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 11px;
+        left: -9px;
+        width: 35px;
+        height: 35px;
+        background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, .65) 55%, rgba(255, 88, 96, 0) 70%);
+      }
+    }
+    &--fb {
+      background: #3e63b3;
+    }
+  
+    &--l {
+      @include font-line(22, 22);
+      height: 40px;
+      width: 40px;
+    }
+    &--m {
+      @include font-line(18, 18);
+      height: 26px;
+      width: 26px;
+    }
+  }
+  
