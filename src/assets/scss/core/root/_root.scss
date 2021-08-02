@@ -24,7 +24,7 @@ $color-danger: #dc3545;
 body {
     background-color: #fff;
     color: $color-text01;
-    font-family: $font-family-main;
+    font-family: $font-family-base;
     font-weight: $font-weight-base;
     line-height: $line-height-base;
     margin: 0;
@@ -36,12 +36,12 @@ body {
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 
-    @include is-sp {}
+    // @include is-sp {}
 
-    @include is-tabpc {
-        font-size: 15px;
-        min-width: $body-min-width;
-    }
+    // @include is-tabpc {
+    //     font-size: 15px;
+    //     min-width: $body-min-width;
+    // }
 }
 
 // remove style

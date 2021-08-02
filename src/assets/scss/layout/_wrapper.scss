@@ -1,7 +1,7 @@
 .l-wrap {
     @include is-sp {
-      padding-left: $gutter-sp;
-      padding-right: $gutter-sp;
+      padding-left: $gutter-sp + 20px;
+      padding-right: $gutter-sp + 20px;
     }
     @include is-tab {
       padding-left: $gutter-pc - 5px;
@@ -11,8 +11,8 @@
       width: $body-min-width;
       margin-left: auto;
       margin-right: auto;
-      padding-left: $gutter-pc;
-      padding-right: $gutter-pc;
+      // padding-left: $gutter-pc;
+      // padding-right: $gutter-pc;
     }
     &--2col {
       @include is-sp {
@@ -22,6 +22,10 @@
       @include is-tabpc {
         width: 700px;
       }
+    }
+
+    @include is-max($body-min-width){
+      width: 100%;
     }
   }
   

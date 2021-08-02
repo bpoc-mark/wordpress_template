@@ -1,5 +1,9 @@
 <?php get_header();?>
-    <section class="sect_1">1</section>
+    <section class="sect_1">
+        <div class="l-wrap">
+            1
+        </div>    
+    </section>
     <section>2</section>
     <section>3</section>
     <section>4</section>
