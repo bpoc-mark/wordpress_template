@@ -77,7 +77,7 @@ template{display:none}
 .c-buttonSns{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;border-radius:50%;color:#fff;text-decoration:none}
 .c-buttonSns i{z-index:1}
 .c-buttonSns--insta{position:relative;background:linear-gradient(135deg,#427eff 0,#f13f79 70%) no-repeat;overflow:hidden}
-.c-buttonSns--insta:before{content:'';position:absolute;top:11px;left:-9px;width:35px;height:35px;background:radial-gradient(#ffdb2c 10%,rgba(255,105,34,0.65) 55%,rgba(255,88,96,0) 70%)}
+.c-buttonSns--insta:before{content:"";position:absolute;top:11px;left:-9px;width:35px;height:35px;background:radial-gradient(#ffdb2c 10%,rgba(255,105,34,0.65) 55%,rgba(255,88,96,0) 70%)}
 .c-buttonSns--fb{background:#3e63b3}
 .c-buttonSns--l{font-size:1.375rem;line-height:1;height:40px;width:40px}
 .c-buttonSns--m{font-size:1.125rem;line-height:1;height:26px;width:26px}
@@ -190,6 +190,17 @@ template{display:none}
 .p-faq .hidden{display:none}
 .p-faq .show{display:block}
 .p-faq .active{color:#0483ff}
+.ten-mincho{font-family:ten-mincho,serif;font-weight:400;font-style:normal}
+@font-face{font-family:"noto_serif_b";src:url(../fonts/NotoSerifCJKjp-Bold.otf) format("opentype");font-style:normal}
+.noto_serif_b{font-family:"noto_serif_b"}
+@font-face{font-family:"noto_serif_r";src:url(../fonts/NotoSerifCJKjp-Regular.otf) format("opentype");font-style:normal}
+.noto_serif_r{font-family:"noto_serif_r"}
+@font-face{font-family:"yugo_b";src:url(../fonts/yugothib.ttf) format("truetype");font-style:normal}
+.yugo_b{font-family:"yugo_b"}
+@font-face{font-family:"yugo_m";src:url(../fonts/YuGothicMedium.otf) format("opentype");font-style:normal}
+.yugo_m{font-family:"yugo_m"}
+@font-face{font-family:"mincho_b";src:url(../fonts/A1MinchoStd-Bold.otf) format("opentype");font-style:normal}
+.mincho_b{font-family:"mincho_b"}
 .p-footer{background-color:rgba(0,0,0,0.870588);padding-top:50px}
 .p-footer__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:20px}
 .p-footer__upper{border-bottom:1px solid rgba(255,255,255,0.2)}
@@ -491,7 +502,7 @@ template{display:none}
 .u-pl-09em{padding-left:9em !important}
 .u-pl-010em{padding-left:10em !important}
 .u-pl-011em{padding-left:11em !important}
-.sect_1 .l-wrap{background-color:red}
+.page_about__sect-1 h1{font-size:2.5rem;color:red}
 @media only screen and (min-width:0) and (max-width:0){.l-header__inner{padding-left:15px;padding-right:15px}
 .l-wrap{padding-left:15px;padding-right:15px}
 .p-introduction__intro .headline__text{font-size:1.625rem}

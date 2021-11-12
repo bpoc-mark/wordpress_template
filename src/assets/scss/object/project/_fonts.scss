@@ -1,0 +1,55 @@
+.ten-mincho {
+	font-family: ten-mincho, serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "noto_serif_b";
+	src: url(../fonts/NotoSerifCJKjp-Bold.otf) format("opentype");
+	font-style: normal;
+}
+
+.noto_serif_b {
+	font-family: "noto_serif_b";
+}
+
+@font-face {
+	font-family: "noto_serif_r";
+	src: url(../fonts/NotoSerifCJKjp-Regular.otf) format("opentype");
+	font-style: normal;
+}
+
+.noto_serif_r {
+	font-family: "noto_serif_r";
+}
+
+@font-face {
+	font-family: "yugo_b";
+	src: url(../fonts/yugothib.ttf) format("truetype");
+	font-style: normal;
+}
+
+.yugo_b {
+	font-family: "yugo_b";
+}
+
+@font-face {
+	font-family: "yugo_m";
+	src: url(../fonts/YuGothicMedium.otf) format("opentype");
+	font-style: normal;
+}
+
+.yugo_m {
+	font-family: "yugo_m";
+}
+
+@font-face {
+	font-family: "mincho_b";
+	src: url(../fonts/A1MinchoStd-Bold.otf) format("opentype");
+	font-style: normal;
+}
+
+.mincho_b {
+	font-family: "mincho_b";
+}

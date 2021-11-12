@@ -1,8 +1,8 @@
 <?php get_header();?>
     <section class="sect_1">
         <div class="l-wrap">
-            1
-        </div>    
+            <h1>section 1</h1>
+        </div>
     </section>
     <section>2</section>
     <section>3</section>

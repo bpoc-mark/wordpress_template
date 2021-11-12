@@ -1,0 +1,10 @@
+// ---------------------------------------------------------------
+//  font-line
+//
+// > usage
+// > @include letter-spacing(200);
+//
+// ---------------------------------------------------------------
+@mixin letter-spacing($target) {
+	letter-spacing: tracking($target);
+}

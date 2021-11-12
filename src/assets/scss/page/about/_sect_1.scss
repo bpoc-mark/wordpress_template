@@ -1,0 +1,8 @@
+.page_about {
+	&__sect-1 {
+		h1 {
+			@include font-line(40);
+			color: red;
+		}
+	}
+}
