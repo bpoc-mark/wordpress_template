@@ -51,7 +51,7 @@ const jsCustomSRC = 'assets/js/*.js';
 const jsCustomDestination = '../release/js/';
 
 // Compiled JS custom file name. Default set to custom i.e. custom.js.
-const jsCustomFile = 'custom';
+const jsCustomFile = 'common';
 
 // Images options.
 
