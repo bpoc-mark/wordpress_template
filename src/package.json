@@ -46,5 +46,7 @@
 		"styles-rtl": "gulp stylesRTL",
 		"cache-clear": "gulp clearCache"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"yakuhanjp": "^3.4.1"
+	}
 }
