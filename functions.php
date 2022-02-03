@@ -1,27 +1,29 @@
 <?php
-// Enqueu the Style
+
+/**
+ * Table of Contents:
+ * Register Styles
+ * Register Script
+*/
+
+/**
+ * Register and Enqueue Styles.
+ */
 function enqueue_styles(){
-    // wp_enqueue_style( 'font-family', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', false );
-    // wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.6.1/css/all.css', false );
-    // wp_enqueue_style( 'font-arrow', 'https://fonts.googleapis.com/css2?family=Iceland&display=swap', false );
-    // wp_enqueue_style( 'top-css', get_stylesheet_directory_uri() . '/assets/css/top.css', array(), null );
-    // wp_enqueue_style( 'sp-css', get_stylesheet_directory_uri() . '/efo_form/style.css', array(), null );
-    // wp_enqueue_style( 'page-css', get_stylesheet_directory_uri() . '/efo_form/mailformpro/mfp.statics/mailformpro.css', array(), null );
+    wp_enqueue_style( 'template-style', get_template_directory_uri() . '/release/css/style.css', '', '', false);
 }
 add_action ('wp_enqueue_scripts', 'enqueue_styles');
 
-// Remove Default Wordpress Jquery
-function remove_jquery_enqueue() {
-    wp_deregister_script( 'jquery' );
+/**
+ * Register and Enqueue Scripts.
+ */
+function load_scripts(){
+	wp_enqueue_script( 'template-jq', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', '', '', true);
+	wp_enqueue_script( 'template-main', get_template_directory_uri() . '/release/js/common.js', '', '', true);
 }
-add_action( 'wp_enqueue_scripts', 'remove_jquery_enqueue' );
+add_action ('wp_enqueue_scripts', 'load_scripts');
 
-// Enqueu the Script
-// function enqueue_scripts(){
-//     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/src/js/jquery-3.3.1.min.js', array(), null );
-//     wp_enqueue_script( 'main-js', get_template_directory_uri() . '/src/js/main.min.js', array(), null );
-// }
-// add_action ('wp_enqueue_scripts', 'enqueue_scripts');
+
 
 // post pagination
 function your_themes_pagination(){
@@ -155,49 +157,3 @@ function owp_pf_support() {
     add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link ', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 }
 add_action( 'after_setup_theme', 'owp_pf_support' );
-
-
-// CUSTOM POST TYPE MEAL
-add_action('init', function() {
-	register_post_type('meal', [
-		'label' => __('Meals', 'txtdomain'),
-		'public' => true,
-		'menu_position' => 5,
-		'supports' => ['title', 'editor', 'thumbnail', 'author', 'revisions', 'comments', 'excerpt'],
-		'show_in_rest' => true,
-		'rewrite' => ['slug' => 'meak'],
-		'taxonomies' => ['meal_type'],
-		'labels' => [
-			'singular_name' => __('Meal', 'txtdomain'),
-			'add_new_item' => __('Add new meal', 'txtdomain'),
-			'new_item' => __('New meal', 'txtdomain'),
-			'view_item' => __('View meal', 'txtdomain'),
-			'not_found' => __('No meals found', 'txtdomain'),
-			'not_found_in_trash' => __('No meals found in trash', 'txtdomain'),
-			'all_items' => __('All Meals', 'txtdomain'),
-			'insert_into_item' => __('Insert into meal', 'txtdomain')
-		],		
-	]);
- 
-	register_taxonomy('meal_type', ['meal'], [
-		'label' => __('Meal Type', 'txtdomain'),
-		'hierarchical' => true,
-		'rewrite' => ['slug' => 'meal-type'],
-		'show_admin_column' => true,
-		'show_in_rest' => true,
-		'labels' => [
-			'singular_name' => __('Meal Type', 'txtdomain'),
-			'all_items' => __('All Meal Types', 'txtdomain'),
-			'edit_item' => __('Edit Meal Type', 'txtdomain'),
-			'view_item' => __('View Meal Type', 'txtdomain'),
-			'update_item' => __('Update Meal Type', 'txtdomain'),
-			'add_new_item' => __('Add New Meal Type', 'txtdomain'),
-			'new_item_name' => __('New Meal Type Name', 'txtdomain'),
-			'search_items' => __('Search Meal Types', 'txtdomain'),
-			'parent_item' => __('Parent Meal Type', 'txtdomain'),
-			'parent_item_colon' => __('Parent Meal Type:', 'txtdomain'),
-			'not_found' => __('No Meal Types found', 'txtdomain'),
-		]
-	]);
-	register_taxonomy_for_object_type('meal_type', 'meal');
-});

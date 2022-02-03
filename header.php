@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title><?php bloginfo('title');?></title>
+<<<<<<< HEAD
     <meta property="og:title" content="">
     <meta property="og:type" content="">
     <meta property="og:url" content="<?php echo get_site_url(); ?>">
@@ -27,6 +28,8 @@
     <!-- INSERT HERE SCRIPT FOR ADOBE FONTS -->
 
     <!-- END ADOBE FONTS -->
+=======
+>>>>>>> 2adc661da18ef0bc4dcbe6b7e705b62369f2b283
 
     <?php wp_head();?>
 </head>
