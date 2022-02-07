@@ -29,10 +29,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php
-            $filePath = get_template_directory_uri(); 
-            $filePath = parse_url($filePath, PHP_URL_PATH);
-        ?>
     <main>
         <div class="page__header">
         </div>

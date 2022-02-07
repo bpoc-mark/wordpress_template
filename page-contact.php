@@ -1,4 +1,8 @@
-<?php get_header();?>
+<?php
+
+/* Template Name: Contact Page */
+
+get_header();?>
 <?php echo do_shortcode('[contact-form-7 id="36" title="Contact form 1"]'); ?>
 <script>
 window.addEventListener('DOMContentLoaded', (event) => {
