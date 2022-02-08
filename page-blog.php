@@ -26,14 +26,4 @@ get_header();?>
 <?php endwhile; ?>
 <?php endif; ?>
 
-<div class="page_navigation">
-    <div class="wp-pagenavi">
-        <a class="previouspostslink" href="#" rel="prev">PREV</a>
-        <a class="page smaller" href="#">1</a>
-        <span class="current">2</span>
-        <a class="page larger" href="#">3</a>
-        <a class="nextpostslink" href="#" rel="next">NEXT</a>
-    </div>
-</div>
-
 <?php get_footer();?>
