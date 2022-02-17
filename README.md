@@ -83,13 +83,4 @@ Additional information about Wordpress Template.
 - [Mark Ariel Maata](https://github.com/bpoc-mark)📖👩‍💻
 - [Greg Amer V. Arsua](https://github.com/arsua-greg)📖👩‍💻
 
-## <a name='Contribute'></a> :handshake: Contribute
-
-Contributions, issues and feature requests are welcome!
-
-- Issue Tracker: https://github.com/HiPE-Inc-ltd/jeen_gross/issues
-- Source Code: https://github.com/HiPE-Inc-ltd/jeen_gross
-
----
-
 Copyright © 2022 [HiPE Inc. ltd.](https://bpoc.co.jp/) All rights reserved
