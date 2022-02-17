@@ -25,9 +25,9 @@ Before you begin, ensure you have met the following requirements:
 | NVM  | > 1.1   | Node version manager for fast switching node version                                  |
 | Node | >= 8.15 | Install Node via [NVM](https://github.com/coreybutler/nvm-windows/releases/tag/1.1.7) |
 
-## <a name='Installing'></a> :rocket: Installing Jeen Gross
+## <a name='Installing'></a> :rocket: Installing Wordpress Template
 
-To install Wordpress in your local machine, run this following script in your terminal:
+To install Wordpress Template in your local machine, run this following script in your terminal:
 
 **Windows**:
 
@@ -42,7 +42,7 @@ To begin the development, follow this steps listed below:
 2. run **`npm install`**
 3. after the dependencies installed, run **`npm start`**
 
-:warning: Jeen Gross does not use the standard format of [Static template](https://github.com/HiPE-Inc-ltd/static_template)
+:warning: Wordpress Template does not use the standard format of [Static template](https://github.com/HiPE-Inc-ltd/static_template)
 
 ##### Code Block:
 
@@ -70,7 +70,7 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## <a name='Additional'></a> :paperclip: Additional Info
 
-Additional information about Jeen Gross.
+Additional information about Wordpress Template.
 
 - `compiled.scss` is the compiled style for `/sp`.
 
