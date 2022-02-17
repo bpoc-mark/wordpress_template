@@ -49,8 +49,9 @@ To begin the development, follow this steps listed below:
 **Windows**:
 
 ```sh
+cd src
 npm install
-npm 
+npm start
 ```
 
 ## <a name='Contributing'></a> :memo: Contributing to Wordpress Template
