@@ -54,8 +54,8 @@ To begin using wordpress pagination, follow this steps listed below:
 3. Edit functions.php and add the lines of code on array
 
 ```sh
-			'mid_size' => 1, => default is 2
-			'end_size' => 1, => default is 1
+'mid_size' => 1, => default is 2
+'end_size' => 1, => default is 1
 ```
 
 4. Save the edited code
