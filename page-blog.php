@@ -24,6 +24,7 @@ get_header();?>
 <!-- BLOG POST CONTENT -->
 
 <?php endwhile; ?>
+<?php echo easy_wp_pagenavigation($the_query); ?>
 <?php endif; ?>
 
 <?php get_footer();?>

@@ -38,11 +38,28 @@ git clone -b <your_branch> https://github.com/bpoc-mark/wordpress_template.git
 ## <a name='Usage'></a>:computer: Usage of Wordpress Template
 
 To begin the development, follow this steps listed below:
+
 1. cd src
 2. run **`npm install`**
 3. after the dependencies installed, run **`npm start`**
 
 :warning: Wordpress Template does not use the standard format of [Static template](https://github.com/HiPE-Inc-ltd/static_template)
+
+## <a name='Usage'></a>:computer: Usage of Wordpress Pagination
+
+To begin using wordpress pagination, follow this steps listed below:
+
+1. Install and Activate Easy WP Page Navigation (https://wordpress.org/plugins/easy-wp-page-navigation/)
+2. Go to wordpress root directory, wp-content/plugins/easy-wp-page-navigation/inc/
+3. Edit functions.php and add the lines of code on array
+
+```sh
+			'mid_size' => 1, => default is 2
+			'end_size' => 1, => default is 1
+```
+
+4. Save the edited code
+5. You can also customize pagination design based on client requirements
 
 ##### Code Block:
 
