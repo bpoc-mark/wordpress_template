@@ -7,6 +7,7 @@ Custom Wordpress template using SCSS and Wordpress Files
 - [:pushpin: Prerequisites](#Prerequisites)
 - [:rocket: Installing Wordpress Template](#Installing)
 - [:computer: Usage of Wordpress Template](#Usage)
+- [:computer: Usage of Wordpress Pagination](#Usage)
 - [:memo: Contributing to Wordpress Template](#Contributing)
 - [:paperclip: Additional Info](#Additional)
 
