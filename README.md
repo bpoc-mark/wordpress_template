@@ -86,10 +86,6 @@ To contribute to Wordpress Template, follow these steps:
 
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-## <a name='Acknowledgements'></a>:two_hearts: Acknowledgements and References
-
-- Added [Dependabot](https://dependabot.com/) an automated dependency updates
-
 ## <a name='Credits'></a> :mailbox: Credits
 
 - [Mark Ariel Maata](https://github.com/bpoc-mark)📖👩‍💻
